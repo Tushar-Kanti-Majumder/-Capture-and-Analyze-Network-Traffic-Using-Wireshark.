@@ -1,0 +1,74 @@
+General Summary of the Capture:
+
+    Capture Duration: I captured TCP traffic for about 1 minute while performing various activities.
+
+    Actions Taken During the Capture:
+
+        I searched for Sachin Tendulkar on Google.
+
+        Then, I navigated to YouTube.
+
+    These actions generated TCP traffic that I captured, filtered, and analyzed.
+
+Packet Details:
+
+In this section, I’ll go over the TCP packets I observed and their details.
+
+1. HTTP (Port 80) - TCP Traffic
+
+    Packet Info: When I searched for Sachin Tendulkar on Google, I observed TCP packets related to HTTP traffic.
+
+    Details:
+
+        Protocol: TCP
+
+        Source Port: Random (chosen by my machine)
+
+        Destination Port: 80 (HTTP)
+
+        This packet was a GET request sent to Google’s server over TCP port 80.
+
+        Example: A GET request to / (home page) was made to Google, showing that my machine initiated a TCP connection to Google's server.
+
+2. HTTPS (Port 443) - TCP Traffic
+
+    Packet Info: After searching for Sachin Tendulkar, I went to YouTube. Here, I saw TCP packets related to the TLS handshake.
+
+    Details:
+
+        Protocol: TCP
+
+        Source Port: Random (chosen by my machine)
+
+        Destination Port: 443 (HTTPS)
+
+        The Client Hello message was part of the TLS handshake over TCP port 443, which means the traffic was encrypted.
+
+        Example: A Client Hello was sent, indicating the start of the SSL/TLS handshake, which is necessary for establishing a secure HTTPS connection.
+
+3. DNS Over TCP (Port 53) - TCP Traffic
+
+    Packet Info: While browsing, my machine needed to resolve domain names like www.google.com and www.youtube.com, so I saw DNS over TCP.
+
+    Details:
+
+        Protocol: TCP
+
+        Source Port: Random (chosen by my machine)
+
+        Destination Port: 53 (DNS)
+
+        The DNS request was made over TCP port 53, even though DNS normally uses UDP. This is common for larger DNS responses or DNSSEC.
+
+        Example: A DNS query for www.google.com was captured, where the request was sent over TCP port 53 to a DNS server (e.g., Google’s DNS server at 8.8.8.8).
+        
+        
+        In my analysis, I successfully identified and documented 3 different TCP protocols that were captured during my browsing activity:
+
+    HTTP (Port 80) - TCP traffic initiated when I searched for Sachin Tendulkar.
+
+    HTTPS (Port 443) - TCP traffic seen during the secure connection to YouTube.
+
+    DNS (Port 53) - TCP traffic used to resolve the domain names for www.google.com and www.youtube.com.
+
+Each protocol used TCP for reliable, ordered communication over the network, which I was able to capture and identify during my session.
